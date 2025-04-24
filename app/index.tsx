@@ -23,15 +23,14 @@ export default function Login() {
   const [ErrorsenhaConfima, setErrorsenhaConfirma] = useState(false);
 
 
-  useEffect(()=>{
-    if(senhaconfirma == senha)
-    {
-        setErrorsenhaConfirma(false)
+  useEffect(() => {
+    if (senhaconfirma === senha) {
+        setErrorsenhaConfirma(false);
+    } else {
+        setErrorsenhaConfirma(true);
     }
-    else(
-        setErrorSenha(true)
-    )
-})
+}, [senhaconfirma, senha]);
+
 
   useEffect(()=>{
 
